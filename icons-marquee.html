@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: transparent;
+    }
+    .container {
+      width: 320px; /* 5 Icons * 64px */
+      height: 80px;
+      overflow: hidden;
+    }
+    .marquee-track {
+      display: flex;
+      width: fit-content;
+      animation: scroll 20s linear infinite;
+    }
+    .icon {
+      width: 64px;
+      height: 64px;
+      flex-shrink: 0;
+	  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.6));
+    }
+    @keyframes scroll {
+      0%   { transform: translateX(0); }
+      100% { transform: translateX(-640px); } /* 10 Icons * 64px */
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="marquee-track">
+      <!-- 10 Icons -->
+      <img src="icon1.png" class="icon" />
+      <img src="icon2.png" class="icon" />
+      <img src="icon3.png" class="icon" />
+      <img src="icon4.png" class="icon" />
+      <img src="icon5.png" class="icon" />
+      <img src="icon6.png" class="icon" />
+      <img src="icon7.png" class="icon" />
+      <img src="icon8.png" class="icon" />
+      <img src="icon9.png" class="icon" />
+
+      <!-- Gleiche 10 Icons nochmal für den Loop -->
+      <img src="icon1.png" class="icon" />
+      <img src="icon2.png" class="icon" />
+      <img src="icon3.png" class="icon" />
+      <img src="icon4.png" class="icon" />
+      <img src="icon5.png" class="icon" />
+      <img src="icon6.png" class="icon" />
+      <img src="icon7.png" class="icon" />
+      <img src="icon8.png" class="icon" />
+      <img src="icon9.png" class="icon" />
+    </div>
+  </div>
+</body>
+</html>
